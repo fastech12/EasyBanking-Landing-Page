@@ -1,0 +1,650 @@
+
+/*ROOT SETTINGS */
+:root {
+    --darkblue: hsl(233, 26%, 24%);
+    --limegreen: hsl(136, 65%, 51%);
+    --brightcyan: hsl(192, 70%, 51%);
+
+    --grayishblue: hsl(233, 8%, 62%);
+    --lightgrayishblue: hsl(220, 16%, 96%);
+    --verylightgray:  hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%);
+}
+/*Resetting CSS to Default*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+    
+}
+
+/*GLOBAL VARIABLES*/
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--grayishblue);
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    outline: none;
+    border-style: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn {
+    background-image: linear-gradient(to right, var(--limegreen), var(--brightcyan));
+    padding: 0.8rem 2rem;
+    color: var(--white);
+    border-radius: 50px;
+    font-size: 1rem;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pl { 
+    padding-left: 8rem;
+}
+
+.pr {
+    padding-right: 8rem;
+}
+
+p, h5 {
+    color: var(--grayishblue);
+    line-height: 1.5rem;
+}
+/*BODY STYLE*/
+
+body {
+    font-size: 18px;
+}
+
+main {
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/*HEADER STYLE*/
+
+header {
+    background-color: var(--white); 
+    position: relative;
+    z-index: 999;
+}
+
+
+header nav ul li { 
+    display: inline-block;
+    height: 8vh;
+}
+
+header a { 
+    display: inline-block;    
+    padding: 1.9rem 1rem; 
+}
+
+
+
+.hamburger--btn {
+    display: none;
+}
+
+header .screen--hamburger ul a:hover { 
+    color: #000;
+    border-bottom: .35rem solid;
+    border-image-source: linear-gradient(to right, var(--limegreen), var(--brightcyan));   
+    border-image-slice: 1;  
+    -webkit-transition: all .5s ease-in-out;
+    transition: color .5s ease-in-out;
+    transition: border-bottom .5s ease-in-out;
+    transform: border-bottom translateY(10px);
+    
+}
+
+.navigation--section {
+    display: block;
+    transition: .5s ease-in-out;
+}
+
+/*SECTION OF FIRST*/
+.first--section { 
+    background-color: var(--white);
+    max-height: 55vh;
+    width: 100%;
+}
+
+.content--text {
+    position: relative; 
+    top: -30rem;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.content--text h1 {
+    font-size: 3rem;  
+    line-height: 3rem; 
+}
+
+.content--text p, .second--section--text p {
+    font-size: 1.2rem;
+}
+
+.content--text h1, p {
+    padding-bottom: 1.5rem;
+}
+
+.content--image {
+    display: inline-block;
+}
+
+.content--image img {
+    width: 80%;
+}
+
+.top--one { 
+    position: relative;
+    top: -8.5rem;
+    bottom: 0;
+    right: 0;
+    left: 20%;
+}
+.top--two {
+    position: relative;
+    top: -43rem;
+    bottom: 0;
+    right: 0;
+    left: 33.5%;
+}
+
+.second--section { 
+    background-color: var(--lightgrayishblue);
+}
+
+.second--section .second--section--text {
+    padding-top: 4rem;
+    width: 45%;
+    padding-bottom: 1.8rem;
+}
+
+.second--section--text h2 {
+    font-size: 1.8rem;
+    padding-bottom: 1.2rem;
+}
+
+.section--showcase {
+    padding-bottom: 3rem;
+}
+
+.section--card {
+    width: 40%;
+    padding-right: 1.7rem;
+}
+
+.section--card h3 {
+    font-size: 1.4rem;
+    padding: 1.2rem 0;
+}
+
+.section--card p {
+    font-size: 1rem;
+}
+
+.latest--articles {
+    background-color: var(--white);
+}
+
+/*LASTEST ARTICLE SECTION*/
+
+.latest--articles {
+    padding-bottom: 3rem;
+}
+.article--image {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.card--images img {
+    width: 100%;
+    height: 185px;
+}
+
+.article--text h2 {
+    font-size: 1.8rem;
+    padding: 3rem 0;
+}
+
+.section--card h5 {
+    font-size: .8rem;
+}
+
+.section--card h4 {
+    font-size: 1.25rem;
+    width: 80%;
+}
+
+.section--card h4:hover {
+    color: var(--limegreen);
+    cursor: pointer;
+}
+
+/*FOOTER SECTION*/
+
+footer {
+    background-color: var(--darkblue);
+    padding: 3rem 0;
+}
+nav {
+    padding-bottom: 1.5rem;
+}
+
+.flex--bottom {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.social--button i {
+    float: right;
+    padding: 0 0.4rem;
+}
+
+.social--button i:hover {
+    background-color: var(--limegreen);
+    border-radius: 45%;
+}
+
+.footer--links li {
+   float: left;
+   width: 40%;
+   line-height: 2.2rem;
+}
+
+.footer--links a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.footer--links a:hover { 
+    color: var(--limegreen);
+    transition: color .5s ease-in-out;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+    .attribution a { 
+        color: hsl(228, 45%, 44%); 
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1300px) {
+    .first--section { 
+        max-height: auto;
+    }
+
+    header nav ul li { 
+        height: 6vh;
+    }
+    
+    header a { 
+        padding: 2rem 1.5rem; 
+    }
+
+      
+    /*SECTION OF FIRST*/
+      
+    .content--text {
+        top: -25rem;
+    }
+    
+    .content--text h1 {
+        font-size: 2.7rem;  
+        line-height: 3rem; 
+    }
+    
+    
+    .top--one { 
+        top: -7rem;
+    }
+    .top--two {
+        top: -38rem;
+    }
+   
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    .first--section { 
+       max-height: 40vh;
+    }
+
+    header a { 
+        padding: 2rem 0.8rem; 
+    }
+    
+    
+    /*SECTION OF FIRST*/
+      
+    .content--text {
+        top: -20rem;
+    }
+    
+
+    
+    .top--one { 
+        top: -6.5rem;
+    }
+    .top--two {
+        top: -32rem;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px)  {
+       
+    /*SECTION OF FIRST*/
+
+    .first--section { 
+        max-height: 100vh;
+     }
+    header a { 
+        padding: 2rem 0.5rem; 
+    }
+
+    .section--showcase .flex {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+      
+    .content--text {
+        top: -13rem;
+    }
+    .top--one { 
+        top: -3.5rem;
+    }
+    .top--two {
+        top: -22rem;
+    }
+    
+.second--section .second--section--text {
+    width: 100%;
+}
+.section--card {
+    width: 100%;
+    padding-right: 1.7rem;
+}
+.latest--articles .flex {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}   
+
+}
+
+
+
+@media only screen and (min-width: 200px) and (max-width: 768px)  {
+
+    header .flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    button {
+        display: none;
+    }
+   
+
+    .pl { 
+        padding-left: 2rem;
+    }
+    
+    .pr {
+        padding-right: 2rem;
+    }
+    
+           
+    /*HEADER STYLE*/
+    
+    header {
+        background-color: var(--white); 
+        position: relative;
+        z-index: 999;
+        height: 8vh;
+    }    
+    
+    /*SECTION OF FIRST*/
+    .first--section { 
+        background-color: var(--white);
+        min-height: 80vh;
+        width: 100%;
+    }
+    .first--section .flex {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .content--text {
+        position: relative; 
+        top: -20rem;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        text-align: center
+    }
+    
+    .content--text h1 {
+        font-size: 3rem;  
+        line-height: 3rem; 
+    }
+    
+    .content--text p, .second--section--text p {
+        font-size: 1.2rem;
+    }
+    
+    .content--text h1, p {
+        padding-bottom: 1.5rem;
+    }
+    
+    .content--image {
+        display: inline-block;
+    }
+    
+    .top--one { 
+        position: relative;
+        top: 3rem;
+        bottom: 0;
+        right: 0;
+        left: 12%;
+    }
+    .top--two {
+        position: relative;
+        top: -23rem;
+        bottom: 0;
+        right: 0;
+        left: 15%;
+    }
+    .btn--next {
+        display: block;
+        position: relative;
+        left: 40%;
+    }
+    
+    .second--section { 
+        background-color: var(--lightgrayishblue);
+        text-align: center;
+    }
+    
+    .second--section .second--section--text {
+        padding-top: 4rem;
+        width: 100%;
+        padding-bottom: 1.8rem;
+    }
+    
+
+    
+    .section--showcase {
+        padding-bottom: 3rem;
+    }
+
+    .section--showcase .flex {
+        display: block;
+    }
+    
+    .section--card {
+        width: 100%;
+        padding-right: 1.7rem;
+    }
+    
+        
+    .section--card p {
+        font-size: 1rem;
+    }
+    
+    .latest--articles {
+        background-color: var(--white);
+    }
+    
+    /*LASTEST ARTICLE SECTION*/
+   
+   
+    .card--images img {
+        width: 100%;
+        height: auto;
+    }
+    .latest--articles .flex {
+        display: block;
+    }
+    
+    .article--text h2 {
+        font-size: 1.8rem;
+        padding: 3rem 0;
+        text-align: center;
+        width: 100%
+    }
+    
+    .section--card h4 {
+        font-size: 1.25rem;
+        width: 100%;
+    }
+    
+   /*FOOTER SECTION*/
+    
+    footer {
+        background-color: var(--darkblue);
+        padding: 3rem 0;
+    }
+    nav {
+        padding-bottom: 1.5rem;
+    }
+
+    footer .flex {
+        display: block;
+    }
+    
+    .flex--bottom {
+        display: flex; 
+        justify-content: space-between;
+        align-items: center; 
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .footer--links {
+        padding-top: 2rem;
+    }
+        
+    .footer--links li {
+       float: none;
+       width: 100%;
+       text-align: center;
+    }
+    
+    .btn--bottom { 
+        display: block;
+        margin-top: 2rem;
+    }
+    
+
+    /*hamburger section*/
+    header .screen--hamburger ul a:hover { 
+        color:var(--verylightgray);
+        border-bottom: 0 solid;
+        border-image-source: none;   
+        border-image-slice: 0;  
+        -webkit-transition: none;
+        transition: color none;
+        transition: border-bottom .5s ease-in-out;
+        transform: border-bottom translateY(10px);
+        transition: .5s ease-in-out;
+        
+    }
+
+    header nav ul li { 
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    
+    header a {    
+        padding: 1.9rem 1rem; 
+    }
+
+    .navigation--section {
+        display: block;        
+        background-color: var(--darkblue);
+        position: absolute;
+        width: 80%;
+        text-align: center;
+        right: 10%; 
+        top: 100%; 
+        left: 5%
+        bottom: 0%;
+        transform: translateY(-120%);
+        transition: all 0.5s ease-in-out;
+}
+    
+.navigation--section a:hover {
+    color: white;
+}
+
+    .hamburger--btn {
+        display: flex;
+        cursor: pointer;
+        
+    }
+
+
+    
+    .close--nav {
+        display: none;
+    }
+
+}
+
+.ani {
+    transform: translateY(0%);
+}
+
+
